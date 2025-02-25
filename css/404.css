@@ -1,0 +1,74 @@
+.error-404 {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-color);
+    background: url('/dls/images/2zombie-background.webp') no-repeat center/cover; /* Ajoutez votre image de zombie ici */
+    background-blend-mode: overlay; /* Mélanger le fond avec l’overlay sombre */
+    position: relative;
+    z-index: 2;
+}
+
+.error-404::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Overlay sombre pour améliorer la lisibilité sur le fond */
+    z-index: -1;
+}
+
+.error-404 h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--neon-red);
+    text-shadow: 0 0 10px rgba(255, 102, 102, 0.8), 0 0 20px rgba(255, 102, 102, 0.6);
+    margin-bottom: 1rem;
+}
+
+.error-404 p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+}
+
+.error-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.error-actions .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .error-404 {
+        min-height: 60vh;
+        padding: 1rem;
+    }
+
+    .error-404 h2 {
+        font-size: 2.5rem;
+    }
+
+    .error-404 p {
+        font-size: 1rem;
+    }
+
+    .error-actions .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}

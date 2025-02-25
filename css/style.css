@@ -1,0 +1,319 @@
+/* Ajout des polices Orbitron et Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Variables pour le thème Material Design post-apo */
+:root {
+    --primary-red: #d32f2f;
+    --neon-red: #ff6666;
+    --neon-cyan: #00ffd5;
+    --dark-bg: rgba(18, 18, 18, 0.95);
+    --card-bg: rgba(50, 50, 50, 0.8);
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    --text-color: #e0e0e0;
+    --overlay-bg: rgba(0, 0, 0, 0.6); /* Overlay vitre teintée */
+}
+
+/* Corps du texte avec Roboto pour la lisibilité */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: var(--dark-bg) url('/dls/images/optimized-background.webp') fixed center/cover;
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Bandeau fixe en haut */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(30, 30, 30, 0.95);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    z-index: 1002;
+    box-shadow: var(--shadow);
+}
+
+/* Bouton Home */
+.home-btn {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+}
+
+.home-btn:hover {
+    color: var(--primary-red);
+}
+
+/* Bouton Hamburger */
+#menu-toggle {
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-right: 1rem; /* Décaler le titre vers la gauche */
+}
+
+#menu-toggle:hover {
+    color: var(--primary-red);
+}
+
+/* Titre dans le bandeau (décalé vers la gauche) */
+.header-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 
+        0 0 8px rgba(255, 102, 102, 0.6),
+        0 0 15px rgba(255, 102, 102, 0.4),
+        0 0 20px rgba(255, 102, 102, 0.3),
+        2px 2px 4px rgba(0, 0, 0, 0.8);
+    background: linear-gradient(45deg, #ff6666, #ff8a80, #ffccbc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: text-shadow 0.3s ease;
+    margin: 0 1rem; /* Espacement pour le décalage */
+}
+
+/* Champ de recherche global dans le bandeau */
+.search-bar {
+    padding: 0.5rem 1rem;
+    background: var(--card-bg);
+    border: none;
+    border-radius: 4px;
+    color: var(--text-color);
+    width: 200px;
+    transition: width 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.search-bar:focus {
+    width: 250px;
+    outline: none;
+}
+
+/* Bouton Login */
+.login-btn {
+    font-family: 'Roboto', sans-serif;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-red);
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.login-btn:hover {
+    background: #b71c1c;
+    transform: translateY(-2px);
+}
+
+/* Panneau latéral (transparent avec boutons slate) */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: rgba(50, 50, 50, 0.7); /* Panneau transparent */
+    backdrop-filter: blur(5px);
+    box-shadow: var(--shadow);
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 2rem 1rem;
+    margin: 0;
+}
+
+#sidebar a {
+    display: block;
+    padding: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 4px; /* Coins arrondis pour un effet slate */
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+#sidebar a:hover {
+    background: rgba(211, 47, 47, 0.2); /* Fond rouge très discret au survol */
+    color: #fff;
+}
+
+#sidebar i {
+    margin-right: 0.5rem;
+}
+
+/* Contenu principal */
+.content {
+    margin-left: 0;
+    margin-top: 80px;
+    transition: margin-left 0.3s ease;
+    position: relative; /* Pour l’overlay */
+    min-height: 100vh; /* Assurer une hauteur minimale */
+}
+
+.content.shifted {
+    margin-left: 250px;
+}
+
+/* Overlay vitre teintée (sauf page d’accueil) */
+.content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Couvrir toute la hauteur du .content */
+    background: var(--overlay-bg); /* Vitre teintée */
+    z-index: 1;
+    pointer-events: none; /* Permet d’interagir avec le contenu en dessous */
+}
+
+body#index .content::before,
+body#hero .content::before { /* Exclure la page d’accueil */
+    display: none;
+}
+
+/* Sections générales */
+.section {
+    position: relative; /* Pour superposer l’overlay */
+    z-index: 2; /* Au-dessus de l’overlay */
+    padding: 6rem 2rem 4rem;
+}
+
+/* Section héroïque (landing) */
+.hero-section {
+    height: 50vh; /* Réduire la hauteur pour centrer le carrousel */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Contenu héroïque */
+.hero-content {
+    padding: 2rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #b0b0b0;
+}
+
+/* Carrousel des héros (centré verticalement) */
+.hero-carousel-section {
+    padding: 2rem 2rem;
+    margin-top: -10rem; /* Ajuster pour centrer verticalement par rapport à la landing */
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh; /* Assurer une hauteur minimale pour centrer */
+}
+
+.hero-carousel {
+    width: 80%; /* Réduire la largeur pour mieux centrer */
+}
+
+.hero-carousel .swiper-slide {
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    text-align: center;
+    padding: 1rem;
+}
+
+.hero-carousel .swiper-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.hero-carousel .swiper-slide p {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: var(--primary-red);
+}
+
+.swiper-pagination-bullet {
+    background: var(--primary-red);
+}
+
+.swiper-pagination-bullet-active {
+    background: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        height: 60px;
+        padding: 0 0.5rem;
+    }
+    .header-title {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+    .search-bar {
+        width: 150px;
+    }
+    .search-bar:focus {
+        width: 200px;
+    }
+    .home-btn {
+        font-size: 1.2rem;
+        margin-right: 0.5rem;
+    }
+    .content {
+        margin-top: 60px;
+    }
+    .content.shifted { margin-left: 0; }
+    #sidebar { width: 200px; }
+    #menu-toggle { margin-right: 0.5rem; }
+    .hero-section {
+        height: 40vh;
+    }
+    .hero-carousel-section {
+        padding: 1rem 1rem;
+        margin-top: -5rem;
+        min-height: 50vh;
+    }
+    .hero-carousel {
+        width: 90%;
+    }
+    .hero-carousel .swiper-slide {
+        padding: 0.5rem;
+    }
+    .hero-carousel .swiper-slide img {
+        width: 80%;
+    }
+}

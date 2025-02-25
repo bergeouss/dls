@@ -1,0 +1,21 @@
+.search-result {
+    background: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    padding: 1rem;
+    margin: 1rem 0;
+    transition: transform 0.3s ease;
+}
+
+.search-result:hover {
+    transform: translateY(-5px);
+}
+
+.search-result a {
+    color: var(--primary-red);
+    text-decoration: none;
+}
+
+.search-result a:hover {
+    color: #fff;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Non Trouvée - Doomsday: Last Survivors</title>
+    <link rel="stylesheet" href="/dls/css/style.css">
+    <link rel="stylesheet" href="/dls/css/404.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="/dls/js/main.js"></script>
+</head>
+<body>
+    <!-- Bandeau fixe en haut avec Home, titre, recherche et login -->
+    <header class="header">
+        <a href="index.html#hero" class="home-btn"><i class="fas fa-home"></i></a>
+        <div id="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <h1 class="header-title">Doomsday: Last Survivors</h1>
+        <input type="text" placeholder="Rechercher sur le site..." class="search-bar" oninput="globalSearch(this.value)">
+        <a href="#login" class="login-btn">Login</a>
+    </header>
+
+    <!-- Panneau latéral -->
+    <nav id="sidebar">
+        <ul>
+            <li><a href="/dls/index.html#hero"><i class="fas fa-home"></i> Accueil</a></li>
+            <li><a href="/dls/pages/heroes.html"><i class="fas fa-skull-crossbones"></i> Héros</a></li>
+            <li><a href="/dls/pages/guides.html"><i class="fas fa-book"></i> Guides</a></li>
+            <li><a href="/dls/pages/news.html"><i class="fas fa-newspaper"></i> Actualités</a></li>
+            <li><a href="/dls/pages/buildings.html"><i class="fas fa-building"></i> Bâtiments</a></li>
+            <li><a href="/dls/pages/community.html"><i class="fas fa-users"></i> Communauté</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenu principal (page 404) -->
+    <main class="content">
+        <section class="error-404">
+            <h2>404 - Zone Contaminée</h2>
+            <p>Il semble que vous ayez pénétré une zone perdue... Cette page n’existe pas dans l’univers de Doomsday: Last Survivors.</p>
+            <p>Les zombies ont peut-être tout détruit ici. Retournez au QG ou explorez d’autres secteurs pour survivre !</p>
+            <div class="error-actions">
+                <a href="/dls/index.html#hero" class="btn">Retour au QG (Accueil)</a>
+                <a href="/dls/pages/heroes.html" class="btn">Explorer les Héros</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
