@@ -24,6 +24,10 @@ body {
     overflow-x: hidden;
 }
 
+body:hover {
+    color: #f0f0f0;
+}
+
 /* Bandeau fixe en haut */
 .header {
     position: fixed;
@@ -227,7 +231,7 @@ body#hero .content::before { /* Exclure la page d’accueil */
 
 /* Carrousel des héros (centré verticalement) */
 .hero-carousel-section {
-    padding: 2rem 2rem;
+    padding: 6rem 2rem 4rem;
     margin-top: -10rem; /* Ajuster pour centrer verticalement par rapport à la landing */
     background: rgba(0, 0, 0, 0.5);
     display: flex;
