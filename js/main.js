@@ -24,6 +24,12 @@ function globalSearch(query) {
         window.location.href = '/dls/pages/search-results.html?query=' + encodeURIComponent(query); // Redirect to search results page.
     }
 }
+/** Event listener to toggle sidebar with "hamburger"
+*/
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    menuToggle.addEventListener('click', toggleMenu);
+});
 
 // Retract the sidebar based on mouse position (not used anymore, see comments below).
 document.addEventListener('DOMContentLoaded', () => {
