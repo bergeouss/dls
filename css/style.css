@@ -241,17 +241,27 @@ body#hero .content::before { /* Exclure la page d’accueil */
 }
 
 .hero-carousel .swiper-slide {
+    height: 400px; /* Adjust to match your design */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     background: var(--card-bg);
-    border-radius: 8px;
-    box-shadow: var(--shadow);
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     overflow: hidden;
-    text-align: center;
     padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.hero-carousel .swiper-slide:hover {
+    transform: translateY(-20px);
 }
 
 .hero-carousel .swiper-slide img {
-    width: 100%;
-    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Use 'cover' if you prefer cropping */
     border-radius: 4px;
 }
 
@@ -259,6 +269,7 @@ body#hero .content::before { /* Exclure la page d’accueil */
     font-family: 'Roboto', sans-serif;
     color: var(--text-color);
     margin-top: 0.5rem;
+    font-size: 1.1rem; /* Texte légèrement plus grand pour lisibilité */
 }
 
 .swiper-button-next, .swiper-button-prev {

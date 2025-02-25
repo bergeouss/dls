@@ -8,7 +8,7 @@ function toggleMenu() {
 // Fonction de recherche globale sur tout le site
 function globalSearch(query) {
     if (query.length > 2) { // Rechercher après 3 caractères
-        window.location.href = 'pages/search-results.html?query=' + encodeURIComponent(query);
+        window.location.href = '/dls/pages/search-results.html?query=' + encodeURIComponent(query);
     }
 }
 

@@ -1,5 +1,5 @@
 .error-404 {
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,8 +7,9 @@
     text-align: center;
     padding: 2rem;
     color: var(--text-color);
-    background: url('/dls/images/2zombie-background.webp') no-repeat center/cover; /* Ajoutez votre image de zombie ici */
+    background: url('/dls/images/2zombie-background.webp') fixed center/cover; /* Ajoutez votre image de zombie ici */
     background-blend-mode: overlay; /* Mélanger le fond avec l’overlay sombre */
+    background-size: cover;
     position: relative;
     z-index: 2;
 }

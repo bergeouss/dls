@@ -53,7 +53,7 @@ function displayResults(results) {
     if (results.length > 0) {
         container.innerHTML = results.map(result => {
             if (typeof result === 'object') {
-                return `<div class="search-result"><h3>${result.name}</h3><p>Rareté: ${result.rarity}, Spécialisation: ${result.specialization.join(", ")}</p><a href="/pages/heroes.html#${result.name.toLowerCase()}">Voir plus</a></div>`;
+                return `<div class="search-result"><h3>${result.name}</h3><p>Rareté: ${result.rarity}, Spécialisation: ${result.specialization.join(", ")}</p><a href="/dls/pages/heroes.html#${result.name.toLowerCase()}">Voir plus</a></div>`;
             } else {
                 return `<div class="search-result"><h3>${result}</h3><p>Résultat trouvé dans Guides, Actualités ou Bâtiments.</p><a href="#">Voir plus</a></div>`;
             }
