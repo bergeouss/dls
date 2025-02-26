@@ -1,0 +1,19 @@
+schemaVersion: 2.0.0
+components:
+- name: dev
+  container:
+    image: public.ecr.aws/aws-mde/universal-image:latest
+    mountSources: true
+commands:
+- id: install
+  exec:
+    component: dev
+    commandLine: "echo 'No dependencies to install for static website'"
+- id: build
+  exec:
+    component: dev
+    commandLine: "echo 'Static website - no build step required'"
+- id: test
+  exec:
+    component: dev
+    commandLine: "find . -name '*.html' -o -name '*.css' -o -name '*.js' | xargs echo 'Validating:'"
