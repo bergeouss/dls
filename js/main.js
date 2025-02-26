@@ -11,7 +11,6 @@ function toggleMenu() {
       sidebar.classList.toggle('active'); // Toggle 'active' class on the sidebar.
       content.classList.toggle('shifted'); // Toggle 'shifted' class on the content.
     }
-    // we don't use shifted class anymore in the new html so this part of the code is useless
 }
 
 /**
@@ -38,6 +37,40 @@ function globalSearch(query) {
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menu-toggle');
     menuToggle.addEventListener('click', toggleMenu);
+    
+    // Auto-retract sidebar based on mouse position
+    const sidebar = document.getElementById('sidebar');
+    const mainContent = document.querySelector('.content');
+    
+    if (sidebar && mainContent) {
+        let sidebarTimer;
+        
+        // Detect when mouse leaves the sidebar area
+        document.addEventListener('mousemove', (e) => {
+            // Get sidebar width (if active)
+            const sidebarWidth = sidebar.classList.contains('active') ? sidebar.offsetWidth : 0;
+            
+            if (sidebar.classList.contains('active')) {
+                // Check if mouse is outside the sidebar area by a certain margin (20px buffer)
+                if (e.clientX > sidebarWidth + 20) {
+                    // Set a timer to close the sidebar after a short delay
+                    clearTimeout(sidebarTimer);
+                    sidebarTimer = setTimeout(() => {
+                        sidebar.classList.remove('active');
+                        if (mainContent) mainContent.classList.remove('shifted');
+                    }, 800); // 800ms delay before closing
+                } else {
+                    // Cancel the timer if mouse moves back to sidebar area
+                    clearTimeout(sidebarTimer);
+                }
+            }
+        });
+        
+        // Keep sidebar open when hovering over it
+        sidebar.addEventListener('mouseenter', () => {
+            clearTimeout(sidebarTimer);
+        });
+    }
 });
 
 // Retract the sidebar based on mouse position (not used anymore, see comments below).
@@ -65,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Initialize Swiper.js for the hero carousel
 document.addEventListener('DOMContentLoaded', () => {
 
-    const swiper = new Swiper('.swiper', {
+    const swiper = new Swiper('.hero-carousel', {
         // Optional parameters
         direction: 'horizontal',
         loop: true,

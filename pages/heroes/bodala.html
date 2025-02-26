@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bodala - Doomsday: Last Survivors</title>
+    <link rel="stylesheet" href="/dls/css/style.css">
+    <link rel="stylesheet" href="/dls/css/hero.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="/dls/js/main.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="/dls/index.html#hero" class="home-btn"><i class="fas fa-home"></i></a>
+        <button id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <h1 class="header-title">Doomsday: Last Survivors</h1>
+        <div class="search-bar-container">
+            <input type="text" placeholder="Rechercher sur le site..." class="search-bar" oninput="globalSearch(this.value)" onkeydown="if(event.key === 'Enter') globalSearch(this.value)">
+        </div>
+        <a href="#login" class="login-btn">Login</a>
+    </header>
+
+    <nav id="sidebar">
+        <ul>
+            <li><a href="/dls/index.html#hero"><i class="fas fa-home"></i> Accueil</a></li>
+            <li><a href="/dls/pages/heroes.html"><i class="fas fa-skull-crossbones"></i> Héros</a></li>
+            <li><a href="/dls/pages/guides.html"><i class="fas fa-book"></i> Guides</a></li>
+            <li><a href="/dls/pages/news.html"><i class="fas fa-newspaper"></i> Actualités</a></li>
+            <li><a href="/dls/pages/buildings.html"><i class="fas fa-building"></i> Bâtiments</a></li>
+            <li><a href="/dls/pages/community.html"><i class="fas fa-users"></i> Communauté</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-container">
+        <section class="hero-header">
+            <div class="hero-image-container">
+                <img src="/dls/images/heroes/bodala.webp" alt="Bodala Image">
+            </div>
+            <div class="hero-info">
+                <h1>Bodala</h1>
+                <p class="hero-rarity">Rareté: <span class="rarity-legendary">Légendaire</span></p>
+                <div class="hero-specializations">
+                    <span class="spec-tag">Infantry</span>
+                    <span class="spec-tag">General</span>
+                    <span class="spec-tag">Skills</span>
+                </div>
+            </div>
+            <div class="hero-lore">
+                <h2>Lore</h2>
+                <p>Ancien leader tribal, Bodala a développé un lien mystique avec la nature qui lui permet de canaliser les énergies primordiales. Sa sagesse et sa force spirituelle en font un guide essentiel pour les survivants dans ce monde dévasté.</p>
+            </div>
+        </section>
+
+        <section class="hero-stats-container">
+            <div class="hero-stats">
+                <h2>Stats</h2>
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <span class="stat-name">Attack:</span>
+                        <span class="stat-value">780</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-name">Defense:</span>
+                        <span class="stat-value">750</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-name">HP:</span>
+                        <span class="stat-value">8900</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-specialization">
+                <h2>Specialization</h2>
+                <p>Leadership tribal et pouvoirs spirituels</p>
+            </div>
+        </section>
+
+        <section class="ability-table-container">
+            <h2>Ability Effects</h2>
+            <table class="ability-table">
+                <thead>
+                    <tr>
+                        <th>Ability Name</th>
+                        <th>Adventure Effect</th>
+                        <th>Battle Effect</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Aura Tribale</td>
+                        <td>Augmente la productivité des ressources de 20%</td>
+                        <td>Augmente les statistiques de tous les alliés de 10% pendant 12 secondes</td>
+                    </tr>
+                    <tr>
+                        <td>Colère Ancestrale</td>
+                        <td>Chance de trouver des reliques rares</td>
+                        <td>Inflige des dégâts de zone et réduit les défenses ennemies de 15%</td>
+                    </tr>
+                    <tr>
+                        <td>Communion Spirituelle</td>
+                        <td>Réduit le temps de récupération des compétences d'équipe</td>
+                        <td>Restaure 10% de la santé maximale et élimine les effets négatifs des alliés</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="hero-strategy">
+            <h2>Strategy Guide</h2>
+            <div class="strategy-content">
+                <h3>Best Uses</h3>
+                <p>Bodala est un excellent héros polyvalent qui peut s'adapter à diverses situations. Utilisez-le comme leader pour maximiser les performances de toute l'équipe grâce à ses capacités de buff.</p>
+                
+                <h3>Team Composition</h3>
+                <p>Associez Bodala avec des héros spécialisés comme Lynne pour les dégâts ou Peggy pour les soins. Ses capacités de soutien rendent n'importe quelle équipe plus efficace et sa polyvalence lui permet de s'intégrer dans presque toutes les compositions.</p>
+                
+                <h3>Equipment Recommendations</h3>
+                <p>Équipez Bodala avec des objets augmentant sa durabilité et la durée de ses effets. Les objets qui réduisent le temps de récupération des compétences sont particulièrement efficaces pour maximiser l'usage de son Aura Tribale.</p>
+            </div>
+        </section>
+    </div>
+
+    </body>
+</html>

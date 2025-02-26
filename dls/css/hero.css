@@ -1,0 +1,28 @@
+/* Hero page specific styles */
+.hero-detail-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-image-container {
+    width: 300px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin: 1rem;
+}
+
+.hero-info {
+    flex: 1;
+    padding: 1rem;
+}
+
+.hero-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+}

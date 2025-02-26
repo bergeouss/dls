@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felix - Doomsday: Last Survivors</title>
+    <link rel="stylesheet" href="/dls/css/style.css">
+    <link rel="stylesheet" href="/dls/css/hero.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="/dls/js/main.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="/dls/index.html#hero" class="home-btn"><i class="fas fa-home"></i></a>
+        <button id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <h1 class="header-title">Doomsday: Last Survivors</h1>
+        <div class="search-bar-container">
+            <input type="text" placeholder="Rechercher sur le site..." class="search-bar" oninput="globalSearch(this.value)" onkeydown="if(event.key === 'Enter') globalSearch(this.value)">
+        </div>
+        <a href="#login" class="login-btn">Login</a>
+    </header>
+
+    <nav id="sidebar">
+        <ul>
+            <li><a href="/dls/index.html#hero"><i class="fas fa-home"></i> Accueil</a></li>
+            <li><a href="/dls/pages/heroes.html"><i class="fas fa-skull-crossbones"></i> Héros</a></li>
+            <li><a href="/dls/pages/guides.html"><i class="fas fa-book"></i> Guides</a></li>
+            <li><a href="/dls/pages/news.html"><i class="fas fa-newspaper"></i> Actualités</a></li>
+            <li><a href="/dls/pages/buildings.html"><i class="fas fa-building"></i> Bâtiments</a></li>
+            <li><a href="/dls/pages/community.html"><i class="fas fa-users"></i> Communauté</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-container">
+        <section class="hero-header">
+            <div class="hero-image-container">
+                <img src="/dls/images/heroes/felix.webp" alt="Felix Image">
+            </div>
+            <div class="hero-info">
+                <h1>Felix</h1>
+                <p class="hero-rarity">Rareté: <span class="rarity-legendary">Légendaire</span></p>
+                <div class="hero-specializations">
+                    <span class="spec-tag">Rider</span>
+                    <span class="spec-tag">General</span>
+                    <span class="spec-tag">Skills</span>
+                </div>
+            </div>
+            <div class="hero-lore">
+                <h2>Lore</h2>
+                <p>Ancien champion équestre reconverti en cavalier de combat, Felix a développé un lien unique avec son cheval qui a étonnamment survécu à l'apocalypse. Sa maîtrise de l'équitation et sa capacité à commander font de lui un atout stratégique inestimable.</p>
+            </div>
+        </section>
+
+        <section class="hero-stats-container">
+            <div class="hero-stats">
+                <h2>Stats</h2>
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <span class="stat-name">Attack:</span>
+                        <span class="stat-value">810</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-name">Defense:</span>
+                        <span class="stat-value">700</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-name">HP:</span>
+                        <span class="stat-value">8300</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-specialization">
+                <h2>Specialization</h2>
+                <p>Commandant de cavalerie et stratège de terrain</p>
+            </div>
+        </section>
+
+        <section class="ability-table-container">
+            <h2>Ability Effects</h2>
+            <table class="ability-table">
+                <thead>
+                    <tr>
+                        <th>Ability Name</th>
+                        <th>Adventure Effect</th>
+                        <th>Battle Effect</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Charge Héroïque</td>
+                        <td>Augmente la vitesse d'exploration de l'équipe</td>
+                        <td>Charge à travers les lignes ennemies, infligeant 160% de dégâts et renversant les cibles</td>
+                    </tr>
+                    <tr>
+                        <td>Ordre de Bataille</td>
+                        <td>Améliore l'efficacité des missions de reconnaissance</td>
+                        <td>Augmente la vitesse de mouvement et l'esquive de tous les alliés de 18% pendant 10 secondes</td>
+                    </tr>
+                    <tr>
+                        <td>Maîtrise Équestre</td>
+                        <td>Chance de découvrir des routes cachées</td>
+                        <td>Permet à Felix d'esquiver 25% des attaques et de contre-attaquer pour 120% de dégâts</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="hero-strategy">
+            <h2>Strategy Guide</h2>
+            <div class="strategy-content">
+                <h3>Best Uses</h3>
+                <p>Felix est excellent pour mener des assauts rapides et pour les missions d'exploration. Sa mobilité et ses capacités de commandement en font un excellent leader pour les équipes offensives et d'exploration.</p>
+                
+                <h3>Team Composition</h3>
+                <p>Associez Felix avec d'autres cavaliers comme Louis pour maximiser ses buffs de vitesse. Il fonctionne également bien avec des héros à fort potentiel offensif comme Lynne qui peuvent bénéficier de ses ordres de bataille pour se repositionner rapidement.</p>
+                
+                <h3>Equipment Recommendations</h3>
+                <p>Privilégiez l'équipement augmentant sa vitesse de déplacement, sa capacité à esquiver et ses statistiques offensives. Les objets qui renforcent ses capacités de commandement sont particulièrement efficaces pour maximiser son potentiel de support d'équipe.</p>
+            </div>
+        </section>
+    </div>
+
+    </body>
+</html>
