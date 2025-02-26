@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stella - Doomsday: Last Survivors</title>
+    <link rel="stylesheet" href="/dls/css/style.css">
+    <link rel="stylesheet" href="/dls/css/hero.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="/dls/js/main.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="/dls/index.html#hero" class="home-btn"><i class="fas fa-home"></i></a>
+        <button id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <h1 class="header-title">Doomsday: Last Survivors</h1>
+        <div class="search-bar-container">
+            <input type="text" placeholder="Rechercher sur le site..." class="search-bar" oninput="globalSearch(this.value)" onkeydown="if(event.key === 'Enter') globalSearch(this.value)">
+        </div>
+        <a href="#login" class="login-btn">Login</a>
+    </header>
+
+    <nav id="sidebar">
+        <ul>
+            <li><a href="/dls/index.html#hero"><i class="fas fa-home"></i> Accueil</a></li>
+            <li><a href="/dls/pages/heroes.html"><i class="fas fa-skull-crossbones"></i> Héros</a></li>
+            <li><a href="/dls/pages/guides.html"><i class="fas fa-book"></i> Guides</a></li>
+            <li><a href="/dls/pages/news.html"><i class="fas fa-newspaper"></i> Actualités</a></li>
+            <li><a href="/dls/pages/buildings.html"><i class="fas fa-building"></i> Bâtiments</a></li>
+            <li><a href="/dls/pages/community.html"><i class="fas fa-users"></i> Communauté</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-container">
+        <section class="hero-header">
+            <div class="hero-image-container">
+                <img src="/dls/images/heroes/stella.webp" alt="Stella Image">
+            </div>
+            <div class="hero-info">
+                <h1>Stella</h1>
+                <p class="hero-rarity">Rareté: <span class="rarity-legendary">Légendaire</span></p>
+                <div class="hero-specializations">
+                    <span class="spec-tag">Infantry</span>
+                    <span class="spec-tag">Siege</span>
+                    <span class="spec-tag">Skills</span>
+                </div>
+            </div>
+            <div class="hero-lore">
+                <h2>Lore</h2>
+                <p>Ancienne ingénieure militaire, Stella s'est spécialisée dans la conception d'armes de siège improvisées. Son génie tactique et sa maîtrise des explosifs en font une experte redoutable dans les opérations de siège et de démolition.</p>
+            </div>
+        </section>
+
+        <section class="hero-stats-container">
+            <div class="hero-stats">
+                <h2>Stats</h2>
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <span class="stat-name">Attack:</span>
+                        <span class="stat-value">850</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-name">Defense:</span>
+                        <span class="stat-value">620</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-name">HP:</span>
+                        <span class="stat-value">7500</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-specialization">
+                <h2>Specialization</h2>
+                <p>Armes de siège et démolition</p>
+            </div>
+        </section>
+
+        <section class="ability-table-container">
+            <h2>Ability Effects</h2>
+            <table class="ability-table">
+                <thead>
+                    <tr>
+                        <th>Ability Name</th>
+                        <th>Adventure Effect</th>
+                        <th>Battle Effect</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Charge Explosive</td>
+                        <td>Augmente les dégâts contre les structures</td>
+                        <td>Lance une bombe qui inflige 200% de dégâts dans une zone et étourdit les ennemis pendant 2 secondes</td>
+                    </tr>
+                    <tr>
+                        <td>Mine Tactique</td>
+                        <td>Chance de récupérer des matériaux supplémentaires lors des destructions</td>
+                        <td>Place un piège qui inflige 250% de dégâts au premier ennemi qui marche dessus</td>
+                    </tr>
+                    <tr>
+                        <td>Génie Militaire</td>
+                        <td>Réduit le temps de construction des structures défensives</td>
+                        <td>Augmente les dégâts contre les cibles stationnaires de 30% pendant 8 secondes</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="hero-strategy">
+            <h2>Strategy Guide</h2>
+            <div class="strategy-content">
+                <h3>Best Uses</h3>
+                <p>Stella excelle dans les missions de siège et dans les situations où le contrôle de zone est crucial. Utilisez-la pour cibler les structures ennemies ou pour préparer le terrain avant les grandes confrontations.</p>
+                
+                <h3>Team Composition</h3>
+                <p>Associez Stella avec des héros qui peuvent immobiliser les ennemis comme Bard ou des tanks comme Adut qui peuvent maintenir les adversaires dans ses zones de dégâts. Elle peut également soutenir des attaquants comme Louis en préparant le terrain pour ses assauts.</p>
+                
+                <h3>Equipment Recommendations</h3>
+                <p>Privilégiez l'équipement augmentant la puissance de ses compétences et les dégâts de zone. Les objets qui réduisent le temps de récupération ou qui augmentent le rayon d'effet de ses capacités sont particulièrement utiles.</p>
+            </div>
+        </section>
+    </div>
+
+    </body>
+</html>
