@@ -47,18 +47,19 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Detect when mouse leaves the sidebar area
         document.addEventListener('mousemove', (e) => {
-            // Get sidebar width (if active)
-            const sidebarWidth = sidebar.classList.contains('active') ? sidebar.offsetWidth : 0;
-            
+            // Only proceed if sidebar is active
             if (sidebar.classList.contains('active')) {
-                // Check if mouse is outside the sidebar area by a certain margin (20px buffer)
-                if (e.clientX > sidebarWidth + 20) {
+                // Get exact sidebar boundaries
+                const sidebarRect = sidebar.getBoundingClientRect();
+                
+                // Check if mouse is outside the sidebar area
+                if (e.clientX > sidebarRect.right) {
                     // Set a timer to close the sidebar after a short delay
                     clearTimeout(sidebarTimer);
                     sidebarTimer = setTimeout(() => {
                         sidebar.classList.remove('active');
                         if (mainContent) mainContent.classList.remove('shifted');
-                    }, 800); // 800ms delay before closing
+                    }, 300); // 300ms delay before closing for more responsive feel
                 } else {
                     // Cancel the timer if mouse moves back to sidebar area
                     clearTimeout(sidebarTimer);
@@ -97,6 +98,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Initialize Swiper.js for the hero carousel
 document.addEventListener('DOMContentLoaded', () => {
+    // Hero data array
+    const heroesData = [
+        { id: 'bodala', name: 'Bodala', rarity: 'Légendaire' },
+        { id: 'stella', name: 'Stella', rarity: 'Légendaire' },
+        { id: 'felix', name: 'Felix', rarity: 'Légendaire' },
+        { id: 'lynne', name: 'Lynne', rarity: 'Légendaire' },
+        { id: 'bard', name: 'Bard', rarity: 'Légendaire' },
+        { id: 'adut', name: 'Adut', rarity: 'Légendaire' },
+        { id: 'jaden', name: 'Jaden', rarity: 'Légendaire' },
+        { id: 'peggy', name: 'Peggy', rarity: 'Elite' },
+        { id: 'louis', name: 'Louis', rarity: 'Légendaire' }
+    ];
+    
+    // Get the swiper wrapper element
+    const swiperWrapper = document.querySelector('.hero-carousel .swiper-wrapper');
+    
+    // Generate slides dynamically
+    if (swiperWrapper) {
+        // Clear any existing slides
+        swiperWrapper.innerHTML = '';
+        
+        // Create slides from the data array
+        heroesData.forEach(hero => {
+            const slide = document.createElement('div');
+            slide.className = 'swiper-slide';
+            
+            slide.innerHTML = `
+                <a href="/dls/pages/hero.html?hero=${hero.id}">
+                    <img src="/dls/images/heroes/${hero.id}.webp" alt="${hero.name}" loading="lazy" class="carousel-image">
+                    <p class="carousel-caption">${hero.name} - ${hero.rarity}</p>
+                </a>
+            `;
+            
+            swiperWrapper.appendChild(slide);
+        });
+    }
 
     const swiper = new Swiper('.hero-carousel', {
         // Optional parameters
