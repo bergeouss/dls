@@ -1,0 +1,58 @@
+/* Styles for the Guide sur l'Armement page */
+
+.hero-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    color: #555;
+    font-size: 1.2em;
+    margin-top: 15px;
+}
+
+.card p, .card ul, .card ol {
+    color: #666;
+    line-height: 1.6;
+}
+
+.card table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.card table th, .card table td {
+    border: 1px solid #e0e0e0;
+    padding: 8px;
+    text-align: left;
+}
+
+.card table th {
+    background-color: #f0f0f0;
+}
+
+blockquote {
+    border-left: 4px solid #007bff;
+    padding-left: 15px;
+    margin: 10px 0;
+    color: #555;
+    font-style: italic;
+}
