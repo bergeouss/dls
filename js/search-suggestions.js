@@ -17,7 +17,7 @@ function createSearchSuggestionsDropdown() {
     dropdown.style.display = 'none';
     
     // Insert after search bar
-    const searchBar = document.querySelector('.search-bar');
+    const searchBar = document.querySelector('#header-search-bar');
     searchBar.parentNode.insertBefore(dropdown, searchBar.nextSibling);
     
     return dropdown;
