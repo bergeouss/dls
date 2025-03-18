@@ -4,15 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guide sur l'Armement - Doomsday: Last Survivors</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/guides.css">
+    <link rel="stylesheet" href="/dls/css/style.css">
+    <link rel="stylesheet" href="/dls/css/guides.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="/dls/js/main.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Guide Complet des Armements dans Doomsday: Last Survivors</h1>
-    </header>
-    <main>
-        <section>
+    <!-- Bandeau fixe en haut avec Home, titre, recherche et login -->
+    <header class="header">
+        <a href="/dls/index.html#hero" class="home-btn"><i class="fas fa-home"></i></a>        
+        <button id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <h1 class="header-title">Doomsday: Last Survivors</h1>
+        <div class="search-bar-container">
+            <input type="text" placeholder="Rechercher sur le site..." class="search-bar" oninput="globalSearch(this.value)">
+        </div>
+        <a href="#login" class="login-btn">Login</a>
+    </header> 
+
+    <!-- Panneau latéral -->
+    <nav id="sidebar">
+        <ul>
+            <li><a href="/dls/index.html#hero"><i class="fas fa-home"></i> Accueil</a></li>
+            <li><a href="/dls/pages/heroes.html"><i class="fas fa-skull-crossbones"></i> Héros</a></li>
+            <li>
+                <a href="#"><i class="fas fa-book"></i> Guides</a>
+                <ul>
+                    <li><a href="/dls/pages/guides.html">Tous les Guides</a></li>
+                    <li><a href="/dls/pages/guide-armement.html">Guide sur l'Armement</a></li>
+                </ul>
+            </li>
+            <li><a href="/dls/pages/news.html"><i class="fas fa-newspaper"></i> Actualités</a></li>
+            <li><a href="/dls/pages/buildings.html"><i class="fas fa-building"></i> Bâtiments</a></li>
+            <li><a href="/dls/pages/community.html"><i class="fas fa-users"></i> Communauté</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-container">
+        <section class="hero-header">
+            <h1>Guide Complet des Armements</h1>
             <h2>📌 1. Comprendre les Armements : Bases & Importance</h2>
             <h3>Qu'est-ce qu'un Armement ?</h3>
             <p>Les armements sont des <strong>équipements spécialisés</strong> qui renforcent les capacités d'un héros en combat. Chaque héros peut en équiper jusqu'à <strong>six</strong>, formant un <strong>ensemble complet</strong> qui offre des bonus et des améliorations de statistiques supplémentaires.</p>
@@ -24,7 +55,7 @@
                 <li>Un <strong>ensemble d'armements bien développé</strong> peut <strong>renverser l'issue d'une bataille</strong>, même face à des adversaires plus puissants.</li>
             </ul>
         </section>
-        <section>
+        <section class="hero-stats-container">
             <h2>📌 2. Rareté & Types d'Armements</h2>
             <p>Il existe <strong>deux niveaux principaux</strong> d'armements :</p>
             <table>
@@ -55,7 +86,7 @@
                 <li><strong>Les leaders de garnison/ralliement doivent avoir les meilleurs armements</strong>, car leurs bonus affectent toute l'équipe.</li>
             </ul>
         </section>
-        <section>
+        <section class="hero-abilities">
             <h2>📌 3. Comment Acquérir & Améliorer les Armements</h2>
             <h3>A. Obtenir des Armements</h3>
             <ul>
@@ -85,7 +116,7 @@
                 <li>Ne pas renforcer avant d'atteindre 1 étoile pour <strong>éviter le gaspillage de ressources</strong>.</li>
             </ul>
         </section>
-        <section>
+        <section class="hero-strategy">
             <h2>📌 4. Renforcer: Maximiser l'Efficacité</h2>
             <h3>Qu'est-ce que le Renforcement ?</h3>
             <p>Le Renforcement permet de <strong>personnaliser</strong> les attributs d'un armement en attribuant des <strong>améliorations de statistiques aléatoires</strong>.</p>
@@ -96,7 +127,7 @@
                 <li>Ne jamais Renforcer un armement de bas niveau—gardez les jetons pour des armements <strong>3 étoiles et plus</strong>.</li>
             </ul>
         </section>
-        <section>
+        <section class="hero-strategy">
             <h2>📌 5. Stratégies Avancées selon le Type de Joueur</h2>
             <h3>Pour les Joueurs F2P & Petits Budgets</h3>
             <ul>
@@ -120,7 +151,7 @@
                 <li>Les leaders de garnison/ralliement doivent avoir les meilleurs armements.</li>
             </ul>
         </section>
-    </main>
+    </div>
     <footer>
         <p>&copy; 2025 Doomsday: Last Survivors Fansite</p>
     </footer>
