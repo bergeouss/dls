@@ -4,7 +4,7 @@
  */
 function toggleMenu() {
     const sidebar = document.getElementById('sidebar'); // Get the sidebar element.
-    const content = document.querySelector('.content'); // Get the content element.
+    const content = document.querySelector('.hero-container'); // Adjusted selector for guide-armement.html
 
     // Check if both elements exist before trying to modify them.
     if (sidebar && content) {
