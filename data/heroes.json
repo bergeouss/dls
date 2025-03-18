@@ -1,0 +1,11 @@
+[
+    { "name": "Bodala", "rarity": "Légendaire", "specialization": ["Infantry", "General", "Skills"] },
+    { "name": "Stella", "rarity": "Légendaire", "specialization": ["Infantry", "Siege", "Skills"] },
+    { "name": "Felix", "rarity": "Légendaire", "specialization": ["Rider", "General", "Skills"] },
+    { "name": "Lynne", "rarity": "Légendaire", "specialization": ["Infantry", "Siege", "Defense"] },
+    { "name": "Bard", "rarity": "Légendaire", "specialization": ["Infantry", "Support", "Skills"] },
+    { "name": "Adut", "rarity": "Légendaire", "specialization": ["Rider", "General", "Attack"] },
+    { "name": "Jaden", "rarity": "Légendaire", "specialization": ["Infantry", "Siege", "Skills"] },
+    { "name": "Peggy", "rarity": "Elite", "specialization": ["Support", "Gathering", "Skills"] },
+    { "name": "Louis", "rarity": "Légendaire", "specialization": ["Infantry", "General", "Defense"] }
+]
