@@ -3,6 +3,7 @@
  * It adds or removes the 'active' class to the sidebar and 'shifted' to content.
  */
 function toggleMenu() {
+    console.log("Toggle menu function called"); // Debugging line
     const sidebar = document.getElementById('sidebar'); // Get the sidebar element.
     const content = document.querySelector('.content'); // Use the original content selector
 
