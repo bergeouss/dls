@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peggy - Doomsday: Last Survivors</title>
+    <link rel="stylesheet" href="/dls/css/style.css">
+    <link rel="stylesheet" href="/dls/css/hero.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="/dls/js/main.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="/dls/index.html#hero" class="home-btn"><i class="fas fa-home"></i></a>
+        <button id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <h1 class="header-title">Doomsday: Last Survivors</h1>
+        <div class="search-bar-container">
+            <input type="text" placeholder="Rechercher sur le site..." class="search-bar" oninput="globalSearch(this.value)" onkeydown="if(event.key === 'Enter') globalSearch(this.value)">
+        </div>
+        <a href="#login" class="login-btn">Login</a>
+    </header>
+
+    <nav id="sidebar">
+        <ul>
+            <li><a href="/dls/index.html#hero"><i class="fas fa-home"></i> Accueil</a></li>
+            <li><a href="/dls/pages/heroes.html"><i class="fas fa-skull-crossbones"></i> Héros</a></li>
+            <li><a href="/dls/pages/guides.html"><i class="fas fa-book"></i> Guides</a></li>
+            <li><a href="/dls/pages/news.html"><i class="fas fa-newspaper"></i> Actualités</a></li>
+            <li><a href="/dls/pages/buildings.html"><i class="fas fa-building"></i> Bâtiments</a></li>
+            <li><a href="/dls/pages/community.html"><i class="fas fa-users"></i> Communauté</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-container">
+        <section class="hero-header">
+            <div class="hero-image-container">
+                <img src="/dls/images/heroes/peggy.webp" alt="Peggy Image">
+            </div>
+            <div class="hero-info">
+                <h1>Peggy</h1>
+                <p class="hero-rarity">Rareté: <span class="rarity-elite">Elite</span></p>
+                <div class="hero-specializations">
+                    <span class="spec-tag">Infantry</span>
+                    <span class="spec-tag">Support</span>
+                    <span class="spec-tag">Healing</span>
+                </div>
+            </div>
+            <div class="hero-lore">
+                <h2>Lore</h2>
+                <p>Ancienne infirmière d'urgence, Peggy a développé ses compétences médicales dans les conditions les plus extrêmes. Son sang-froid et sa détermination à sauver des vies font d'elle une alliée précieuse dans ce monde dévasté.</p>
+            </div>
+        </section>
+
+        <section class="hero-stats-container">
+            <div class="hero-stats">
+                <h2>Stats</h2>
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <span class="stat-name">Attack:</span>
+                        <span class="stat-value">520</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-name">Defense:</span>
+                        <span class="stat-value">610</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-name">HP:</span>
+                        <span class="stat-value">7200</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-specialization">
+                <h2>Specialization</h2>
+                <p>Guérison et soutien médical</p>
+            </div>
+        </section>
+
+        <section class="ability-table-container">
+            <h2>Ability Effects</h2>
+            <table class="ability-table">
+                <thead>
+                    <tr>
+                        <th>Ability Name</th>
+                        <th>Adventure Effect</th>
+                        <th>Battle Effect</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Premiers Secours</td>
+                        <td>Réduit le temps de récupération après les blessures en exploration</td>
+                        <td>Soigne l'allié avec le moins de PV pour 25% de ses PV maximum</td>
+                    </tr>
+                    <tr>
+                        <td>Stimulants</td>
+                        <td>Chance de trouver des fournitures médicales supplémentaires</td>
+                        <td>Augmente la vitesse de déplacement et d'attaque d'un allié de 15% pendant 6 secondes</td>
+                    </tr>
+                    <tr>
+                        <td>Zone de Soin</td>
+                        <td>Améliore l'efficacité des objets de soin utilisés</td>
+                        <td>Crée une zone qui soigne les alliés à l'intérieur de 3% de leurs PV maximum par seconde</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="hero-strategy">
+            <h2>Strategy Guide</h2>
+            <div class="strategy-content">
+                <h3>Best Uses</h3>
+                <p>Peggy est indispensable pour les missions prolongées et les combats d'endurance. Placez-la en position sécurisée derrière vos tanks pour qu'elle puisse soigner sans risque.</p>
+                
+                <h3>Team Composition</h3>
+                <p>Associez Peggy avec des tanks comme Adut ou Robert qui bénéficieront grandement de ses soins constants. Elle se combine également bien avec des DPS comme Lynne ou Louis qui peuvent avoir besoin de soins rapides.</p>
+                
+                <h3>Equipment Recommendations</h3>
+                <p>Privilégiez l'équipement augmentant sa capacité de guérison, son temps de récupération de compétences et sa survie. Les objets qui étendent la portée ou la durée de ses soins sont particulièrement utiles.</p>
+            </div>
+        </section>
+    </div>
+
+    </body>
+</html>

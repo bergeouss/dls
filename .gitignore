@@ -1,2 +1,4 @@
 .idx/
 .vscode/
+.gitignore
+.vscode/settings.json

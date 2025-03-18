@@ -224,9 +224,20 @@ body#hero .content::before { /* Exclure la page d’accueil */
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: #b0b0b0;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #ffffff;
+    text-shadow: 0 0 10px var(--neon-red), 0 0 15px var(--neon-red);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1.5rem 3rem;
+    border-radius: 8px;
+    transform: translateZ(0); /* Force GPU rendering for smoother animations */
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.hero-content p:hover {
+    transform: scale(1.05) translateZ(0);
+    text-shadow: 0 0 15px var(--neon-red), 0 0 20px var(--neon-red), 0 0 25px var(--neon-red);
 }
 
 /* Carrousel des héros (centré verticalement) */
@@ -255,11 +266,12 @@ body#hero .content::before { /* Exclure la page d’accueil */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     padding: 1rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hero-carousel .swiper-slide:hover {
-    transform: translateY(-20px);
+    transform: translateY(-20px) scale(1.05);
+    box-shadow: 0 0 15px var(--neon-red), 0 0 25px rgba(255, 102, 102, 0.5);
 }
 
 .hero-carousel .swiper-slide img.carousel-image {
@@ -277,15 +289,33 @@ body#hero .content::before { /* Exclure la page d’accueil */
 }
 
 .swiper-button-next, .swiper-button-prev {
-    color: var(--primary-red);
+    color: var(--neon-red);
+    text-shadow: 0 0 10px var(--neon-red), 0 0 15px var(--neon-red);
+    opacity: 0.8;
+    transition: transform 0.3s ease, opacity 0.3s ease, text-shadow 0.3s ease;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+    transform: scale(1.2);
+    opacity: 1;
+    text-shadow: 0 0 15px var(--neon-red), 0 0 20px var(--neon-red), 0 0 25px var(--neon-red);
 }
 
 .swiper-pagination-bullet {
     background: var(--primary-red);
+    opacity: 0.7;
+    transition: transform 0.3s ease, background 0.3s ease, opacity 0.3s ease;
+}
+
+.swiper-pagination-bullet:hover {
+    transform: scale(1.5);
+    opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
-    background: #fff;
+    background: var(--neon-red);
+    box-shadow: 0 0 10px var(--neon-red);
+    opacity: 1;
 }
 
 /* Responsive */

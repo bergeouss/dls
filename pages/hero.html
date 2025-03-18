@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>%HERO_NAME% - Doomsday: Last Survivors</title>
+    <link rel="stylesheet" href="/dls/css/style.css">
+    <link rel="stylesheet" href="/dls/css/hero.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="/dls/js/main.js"></script>
+    <script defer src="/dls/js/hero-page-handler.js"></script>
+</head>
+<body>
+    <!-- Bandeau fixe en haut avec Home, titre, recherche et login -->
+    <header class="header">
+        <a href="/dls/index.html#hero" class="home-btn"><i class="fas fa-home"></i></a>
+        <button id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <h1 class="header-title">Doomsday: Last Survivors</h1>
+        <div class="search-bar-container">
+            <input type="text" placeholder="Rechercher sur le site..." class="search-bar" oninput="globalSearch(this.value)" onkeydown="if(event.key === 'Enter') globalSearch(this.value)">
+        </div>
+        <a href="#login" class="login-btn">Login</a>
+    </header>
+
+    <!-- Panneau latéral -->
+    <nav id="sidebar">
+        <ul>
+            <li><a href="/dls/index.html#hero"><i class="fas fa-home"></i> Accueil</a></li>
+            <li><a href="/dls/pages/heroes.html"><i class="fas fa-skull-crossbones"></i> Héros</a></li>
+            <li><a href="/dls/pages/guides.html"><i class="fas fa-book"></i> Guides</a></li>
+            <li><a href="/dls/pages/news.html"><i class="fas fa-newspaper"></i> Actualités</a></li>
+            <li><a href="/dls/pages/buildings.html"><i class="fas fa-building"></i> Bâtiments</a></li>
+            <li><a href="/dls/pages/community.html"><i class="fas fa-users"></i> Communauté</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-container">
+        <section class="hero-header">
+            <div class="hero-image-container">
+                <img src="" alt="Hero Image" class="hero-detail-image">
+            </div>
+            <div class="hero-info">
+                <h1>%HERO_NAME%</h1>
+                <p class="hero-rarity">Rareté: <span class="rarity-%RARITY_CLASS%">%HERO_RARITY%</span></p>
+                <div class="hero-specializations">
+                    <span class="spec-tag">%HERO_SPEC1%</span>
+                    <span class="spec-tag">%HERO_SPEC2%</span>
+                    <span class="spec-tag">%HERO_SPEC3%</span>
+                </div>
+            </div>
+            <div class="hero-lore">
+                <h2>Lore</h2>
+                <p>%HERO_LORE%</p>
+            </div>
+        </section>
+
+        <section class="hero-stats-container">
+            <div class="hero-stats">
+                <h2>Stats</h2>
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <span class="stat-name">Attack:</span>
+                        <span class="stat-value">%HERO_ATTACK%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-name">Defense:</span>
+                        <span class="stat-value">%HERO_DEFENSE%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-name">HP:</span>
+                        <span class="stat-value">%HERO_HP%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-specialization">
+                <h2>Specialization</h2>
+                <p>%HERO_MAIN_ROLE%</p>
+            </div>
+        </section>
+
+        <section class="ability-table-container">
+            <h2>Ability Effects</h2>
+            <table class="ability-table">
+                <thead>
+                    <tr>
+                        <th>Ability Name</th>
+                        <th>Adventure Effect</th>
+                        <th>Battle Effect</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>%ABILITY1_NAME%</td>
+                        <td>%ABILITY1_ADVENTURE%</td>
+                        <td>%ABILITY1_BATTLE%</td>
+                    </tr>
+                    <tr>
+                        <td>%ABILITY2_NAME%</td>
+                        <td>%ABILITY2_ADVENTURE%</td>
+                        <td>%ABILITY2_BATTLE%</td>
+                    </tr>
+                    <tr>
+                        <td>%ABILITY3_NAME%</td>
+                        <td>%ABILITY3_ADVENTURE%</td>
+                        <td>%ABILITY3_BATTLE%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="hero-strategy">
+            <h2>Strategy Guide</h2>
+            <div class="strategy-content">
+                <h3>Best Uses</h3>
+                <p>%HERO_BEST_USES%</p>
+                
+                <h3>Team Composition</h3>
+                <p>%HERO_TEAM_COMP%</p>
+                
+                <h3>Equipment Recommendations</h3>
+                <p>%HERO_EQUIPMENT%</p>
+            </div>
+        </section>
+    </div>
+
+    </body>
+</html>
