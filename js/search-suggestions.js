@@ -141,8 +141,8 @@ function selectSuggestion(text) {
     globalSearch(text);
 }
 
-// Improved global search function (to replace the one in main.js)
-function enhancedGlobalSearch(query) {
+// Global search function
+function globalSearch(query) {
     // Show suggestions in real-time
     showSearchSuggestions(query);
     
