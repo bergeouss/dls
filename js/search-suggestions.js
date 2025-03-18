@@ -89,11 +89,47 @@ function getSearchSuggestions(query) {
 }
 
 // Get all searchable content
-async function getAllSearchableContent() {
-    const heroes = await fetch('data/heroes.json').then(res => res.json());
-    const guides = await fetch('data/guides.json').then(res => res.json());
-    const news = await fetch('data/news.json').then(res => res.json());
-    const buildings = await fetch('data/buildings.json').then(res => res.json());
+function getAllSearchableContent() {
+    // Heroes data
+    const heroes = [
+        { name: "Bodala", rarity: "Légendaire", specialization: ["Infantry", "General", "Skills"] },
+        { name: "Stella", rarity: "Légendaire", specialization: ["Infantry", "Siege", "Skills"] },
+        { name: "Felix", rarity: "Légendaire", specialization: ["Rider", "General", "Skills"] },
+        { name: "Lynne", rarity: "Légendaire", specialization: ["Infantry", "Siege", "Defense"] },
+        { name: "Bard", rarity: "Légendaire", specialization: ["Infantry", "Support", "Skills"] },
+        { name: "Adut", rarity: "Légendaire", specialization: ["Rider", "General", "Attack"] },
+        { name: "Jaden", rarity: "Légendaire", specialization: ["Infantry", "Siege", "Skills"] },
+        { name: "Peggy", rarity: "Elite", specialization: ["Support", "Gathering", "Skills"] },
+        { name: "Louis", rarity: "Légendaire", specialization: ["Infantry", "General", "Defense"] }
+    ];
+
+    // Guides data
+    const guides = [
+        "Prise en Main - Comment Démarrer",
+        "Optimisation de Base",
+        "Stratégies PvP Avancées",
+        "Guide des Ressources",
+        "Développement de Héros",
+        "Stratégies d'Alliance"
+    ];
+
+    // News data
+    const news = [
+        "Nouvelle Mise à Jour 1.5",
+        "Événement Spécial Zombies",
+        "Tournoi PvP Saisonnier",
+        "Bonus de Connexion Quotidiens"
+    ];
+
+    // Buildings data
+    const buildings = [
+        "Caserne",
+        "Centre de Recherche",
+        "Centre de Commandement",
+        "Mur de Défense",
+        "Tour de Guet",
+        "Entrepôt"
+    ];
 
     return [...heroes, ...guides, ...news, ...buildings];
 }
