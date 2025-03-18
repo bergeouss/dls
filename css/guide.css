@@ -4,6 +4,7 @@
     max-width: 90%;
     margin: 80px auto 0;
     padding: 20px;
+    padding-top: 80px; /* Ajustement pour éviter que le titre soit caché */
     background-color: rgba(20, 20, 20, 0.8);
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
