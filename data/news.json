@@ -1,6 +1,6 @@
 [
-    "Nouvelle Mise à Jour 1.5",
-    "Événement Spécial Zombies",
-    "Tournoi PvP Saisonnier",
-    "Bonus de Connexion Quotidiens"
+    { "name": "Nouvelle Mise à Jour 1.5", "category": "Actualités" },
+    { "name": "Événement Spécial Zombies", "category": "Actualités" },
+    { "name": "Tournoi PvP Saisonnier", "category": "Actualités" },
+    { "name": "Bonus de Connexion Quotidiens", "category": "Actualités" }
 ]

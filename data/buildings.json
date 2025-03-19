@@ -1,8 +1,8 @@
 [
-    "Caserne",
-    "Centre de Recherche",
-    "Centre de Commandement",
-    "Mur de Défense",
-    "Tour de Guet",
-    "Entrepôt"
+    { "name": "Caserne", "category": "Bâtiments" },
+    { "name": "Centre de Recherche", "category": "Bâtiments" },
+    { "name": "Centre de Commandement", "category": "Bâtiments" },
+    { "name": "Mur de Défense", "category": "Bâtiments" },
+    { "name": "Tour de Guet", "category": "Bâtiments" },
+    { "name": "Entrepôt", "category": "Bâtiments" }
 ]

@@ -1,8 +1,8 @@
 [
-    "Prise en Main - Comment Démarrer",
-    "Optimisation de Base",
-    "Stratégies PvP Avancées",
-    "Guide des Ressources",
-    "Développement de Héros",
-    "Stratégies d'Alliance"
+    { "name": "Prise en Main - Comment Démarrer", "category": "Guides" },
+    { "name": "Optimisation de Base", "category": "Guides" },
+    { "name": "Stratégies PvP Avancées", "category": "Guides" },
+    { "name": "Guide des Ressources", "category": "Guides" },
+    { "name": "Développement de Héros", "category": "Guides" },
+    { "name": "Stratégies d'Alliance", "category": "Guides" }
 ]

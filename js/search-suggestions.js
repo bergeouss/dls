@@ -33,48 +33,38 @@ function showSearchSuggestions(query) {
     }
     
     // Get search suggestions
-    const suggestions = getSearchSuggestions(query);
-    
-    if (suggestions.length > 0) {
-        dropdown.innerHTML = suggestions.map(suggestion => {
-            let displayText, category;
-            
-            if (typeof suggestion === 'object') {
-                displayText = suggestion.name;
-                category = suggestion.rarity ? 'Héros' : (suggestion.type || 'Contenu');
-            } else {
-                displayText = suggestion;
+    getSearchSuggestions(query).then(suggestions => {
+        if (suggestions.length > 0) {
+            dropdown.innerHTML = suggestions.map(suggestion => {
+                let displayText, category;
                 
-                // Try to determine category based on content
-                if (suggestion.includes('Mise à Jour') || suggestion.includes('Événement')) {
-                    category = 'Actualités';
-                } else if (suggestion.includes('Stratégie') || suggestion.includes('Guide')) {
-                    category = 'Guides';
-                } else if (suggestion.includes('Centre') || suggestion.includes('Caserne')) {
-                    category = 'Bâtiments';
+                if (typeof suggestion === 'object') {
+                    displayText = suggestion.name;
+                    category = suggestion.category || 'Contenu';
                 } else {
+                    displayText = suggestion;
                     category = 'Contenu';
                 }
-            }
+                
+                return `<div class="suggestion-item" onclick="selectSuggestion('${displayText}')">
+                    <span class="suggestion-text">${displayText}</span>
+                    <span class="suggestion-category">${category}</span>
+                </div>`;
+            }).join('');
             
-            return `<div class="suggestion-item" onclick="selectSuggestion('${displayText}')">
-                <span class="suggestion-text">${displayText}</span>
-                <span class="suggestion-category">${category}</span>
-            </div>`;
-        }).join('');
-        
-        dropdown.style.display = 'block';
-    } else {
-        dropdown.style.display = 'none';
-    }
+            dropdown.style.display = 'block';
+        } else {
+            dropdown.style.display = 'none';
+        }
+    });
 }
 
 // Get search suggestions based on query
-function getSearchSuggestions(query) {
+async function getSearchSuggestions(query) {
     query = query.toLowerCase();
     
     // Get all content to search through
-    const allContent = getAllSearchableContent();
+    const allContent = await getAllSearchableContent();
     
     // Filter content that matches query
     return allContent.filter(item => {
@@ -89,47 +79,11 @@ function getSearchSuggestions(query) {
 }
 
 // Get all searchable content
-function getAllSearchableContent() {
-    // Heroes data
-    const heroes = [
-        { name: "Bodala", rarity: "Légendaire", specialization: ["Infantry", "General", "Skills"] },
-        { name: "Stella", rarity: "Légendaire", specialization: ["Infantry", "Siege", "Skills"] },
-        { name: "Felix", rarity: "Légendaire", specialization: ["Rider", "General", "Skills"] },
-        { name: "Lynne", rarity: "Légendaire", specialization: ["Infantry", "Siege", "Defense"] },
-        { name: "Bard", rarity: "Légendaire", specialization: ["Infantry", "Support", "Skills"] },
-        { name: "Adut", rarity: "Légendaire", specialization: ["Rider", "General", "Attack"] },
-        { name: "Jaden", rarity: "Légendaire", specialization: ["Infantry", "Siege", "Skills"] },
-        { name: "Peggy", rarity: "Elite", specialization: ["Support", "Gathering", "Skills"] },
-        { name: "Louis", rarity: "Légendaire", specialization: ["Infantry", "General", "Defense"] }
-    ];
-
-    // Guides data
-    const guides = [
-        "Prise en Main - Comment Démarrer",
-        "Optimisation de Base",
-        "Stratégies PvP Avancées",
-        "Guide des Ressources",
-        "Développement de Héros",
-        "Stratégies d'Alliance"
-    ];
-
-    // News data
-    const news = [
-        "Nouvelle Mise à Jour 1.5",
-        "Événement Spécial Zombies",
-        "Tournoi PvP Saisonnier",
-        "Bonus de Connexion Quotidiens"
-    ];
-
-    // Buildings data
-    const buildings = [
-        "Caserne",
-        "Centre de Recherche",
-        "Centre de Commandement",
-        "Mur de Défense",
-        "Tour de Guet",
-        "Entrepôt"
-    ];
+async function getAllSearchableContent() {
+    const heroes = await fetch('/dls/data/heroes.json').then(res => res.json());
+    const guides = await fetch('/dls/data/guides.json').then(res => res.json());
+    const news = await fetch('/dls/data/news.json').then(res => res.json());
+    const buildings = await fetch('/dls/data/buildings.json').then(res => res.json());
 
     return [...heroes, ...guides, ...news, ...buildings];
 }
