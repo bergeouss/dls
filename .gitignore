@@ -1,4 +1,6 @@
 .idx/
+devfile.yaml
+.rooignore
+.roomodes
 .vscode/
-.gitignore
-.vscode/settings.json
+.roo/
