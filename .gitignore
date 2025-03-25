@@ -3,4 +3,5 @@ devfile.yaml
 .rooignore
 .roomodes
 .vscode/
-.roo/memory-bank/
+.roo/
+memory-bank/
